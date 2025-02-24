@@ -10,5 +10,6 @@ while True:
     # Check por todos os eventos
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
+            print('Quitting...')
             pygame.quit()  # Fechar a Janela
             quit()  # Encerrar a inicialização do pygame
