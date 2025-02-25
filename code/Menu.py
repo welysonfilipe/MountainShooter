@@ -17,7 +17,7 @@ class Menu:
     def run(self):
         menu_option = 0
         pygame.mixer_music.load('./asset/Menu.mp3')
-        pygame.mixer_music.play(-1)
+        pygame.mixer_music.play(-1)  # Parametro (-1) é para música tocar sem parar
         while True:
             # DRAW IMAGES
             self.window.blit(source=self.surf, dest=self.rect)
@@ -29,7 +29,7 @@ class Menu:
                     self.menu_text(20, MENU_OPTION[i], C_YELLOW, ((WIN_WIDTH / 2), 200 + 25 * i))
                 else:
                     self.menu_text(20, MENU_OPTION[i], C_WHITE, ((WIN_WIDTH / 2), 200 + 25 * i))
-            pygame.display.flip()
+            pygame.display.flip()  # Atualiza a tela (ex: Após adicionar a imagem no background)
 
             # Check for all events
             for event in pygame.event.get():
